@@ -1,27 +1,27 @@
 # Site settings
-title: 博客名字 # 你的博客名字，可以定义修订
+title: 红尘客栈 # 你的博客名字，可以定义修订
 header-img: "img/green.jpg"
 tagline: "cn"  
-description: "这是我的博客"  # 一句话描述你的博客
+description: "既来之则安之"  # 一句话描述你的博客
 baseurl: ""
-url: "http://cnfeat"  # 此处填写你的博客地址 
+url: "xu-ke.co"  # 此处填写你的博客地址 
 
 # About/contact
 owner: 
-  name: "作者名字" # 填写作者信息：名字
-  email: X@gmail.com # 填写作者信息：邮箱
-  bio: "你的博客描述" # 填写作者信息：博客描述
+  name: "faker" # 填写作者信息：名字
+  email: xukefaker+study@gmail.com # 填写作者信息：邮箱
+  bio: "Whatever you do, be a good one" # 填写作者信息：博客描述
 
 # Data
 gavatar: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 favicon: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 
 douban_username:  # 你的豆瓣id
-twitter_username: 
-github_username: 
-facebook_username: 
-weibo_username: 
-zhihu_username: 
+twitter_username: none
+github_username: xukefaker
+facebook_username: none
+weibo_username: none
+zhihu_username: lewis
 
 # Build settings  
 # use Github Flavored Markdown !important  
@@ -33,7 +33,7 @@ paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Shanghai
+timezone: Asia/Nanchang
 
 # Defaults for posts
 defaults:
@@ -43,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "你的名字" # 你的名字
+      author: "faker" # 你的名字
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
