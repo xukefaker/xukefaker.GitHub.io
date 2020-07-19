@@ -61,6 +61,13 @@ activity_main就是xml布局文件。它位于 res>layout，双击进去看一�
 
 右上角有显示方式，我们选择split更方便进行调试
 
+#### activity_main.xml文件
+android开发的布局和html很像，就是一些名字不一样。都能采用嵌套的方式来部置控件
+
+在开发界面，右上角有显示代码和界面的三种方式，我一般选择split，这样方便进行调试
+
+实际上系统一开始就已经帮我们生成了hello world的代码：` android:text="Hello World!"`，这行代码让textview显示了hello world这个字符串
+
 #### AndroidManifest.xml文件
 
 在main文件夹里面我们可以看到还有一个AndroidManifest.xml文件，双击查看代码。
@@ -77,9 +84,10 @@ activity_main就是xml布局文件。它位于 res>layout，双击进去看一�
         </activity>
 ```
 
-就是它让MainActivity成为主活动的，如果你想更改主活动，
+就是它让MainActivity成为主活动的，如果你想更改主活动，直接更改文件名即可
 
-
+到这里我们就大致了解了如何创建一个简单的Android开发项目了。Android studio为我们准备了许多种不同分辨率的手机模拟器（需要另外下载文件）。安装好模拟器后，你的app就可以直接在模拟器上运行了。
+你也可以选择在自己手机上运行。
 
 
 
