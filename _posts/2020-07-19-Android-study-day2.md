@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 安卓开发学习day2
-date: 2020-7-18
+date: 2020-7-19
 categories: blog
 tags: [学习,Android]
 description: 今天学习了Textview和Button这两个控件，以及两种布局方式：LinearLayout和RelativeLayout
