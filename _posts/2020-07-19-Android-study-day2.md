@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 安卓开发学习day1
+title: 安卓开发学习day2
 date: 2020-7-18
 categories: blog
 tags: [学习,Android]
