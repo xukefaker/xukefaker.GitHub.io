@@ -4,7 +4,7 @@ title: 安卓开发学习day2
 date: 2020-7-19
 categories: blog
 tags: [学习,Android]
-description: 今天学习了Textview和Button这两个控件，以及两种布局方式：LinearLayout和RelativeLayout
+description: 今天学习了Textview这个控件，以及两种布局方式：LinearLayout和RelativeLayout
 ---
 
 ## LinearLayout
@@ -24,6 +24,8 @@ description: 今天学习了Textview和Button这两个控件，以及两种布�
 ```
 
 控件123...都将按照线性布局来排列。你可以通过padding来对所有控件设置边距，也可以通过设置单个控件的margin来指定其与其他控件的边距
+
+你可以通过设置gravity属性来调整布局里控件的显示位置：左上角？右下角？中心？
 
 ## RelativeLayout
 顾名思义，相对布局，就是一切控件都相对与**谁**在**哪里**。
