@@ -16,7 +16,7 @@ text, textcolor, textsize等等。
 
 Button可以理解为一种经过修饰的textview：它有其默认的样式。一个button最重要的功能就是用户点击后处理一个这个点击事件。
 
-下面我们来创建一个button，它在被点击之后，手机屏幕会出现一个**短暂的提示消息**，内容是**confirmed**。
+下面我们来创建一个button，它在被点击之后，手机屏幕会出现一个**短暂的提示消息**，内容是**That's right**。
 
 #### 1
 
@@ -25,8 +25,8 @@ Button可以理解为一种经过修饰的textview：它有其默认的样式。
     <Button
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/aBtn_1"
-        android:text="按钮1"
+        android:id="@+id/aBtn_3"
+        android:text="按钮3"
         android:textColor="#000000"
         android:textSize="20sp"
         android:background="#FF0000"
@@ -35,16 +35,16 @@ Button可以理解为一种经过修饰的textview：它有其默认的样式。
 
 #### 2
 
-在java文件里找到这个button。先声明这个button`    private Button mBtn1;`
+在java文件里找到这个button。先声明这个button`    private Button mBtn3;`
 
 再在onCreate方法里调用findviewbyid方法，通过id找到这个button
-`        mBtn1 = findViewById(R.id.aBtn_1);`
+`        mBtn3 = findViewById(R.id.aBtn_3);`
 
 #### 3
 
 最后给它设置点击监听器
 ```
-        mBtn1.setOnClickListener(new View.OnClickListener() {
+        mBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(ButtonActivity.this, "That's right", Toast.LENGTH_SHORT).show();
