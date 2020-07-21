@@ -4,7 +4,7 @@ title: 安卓开发学习day4
 date: 2020-7-21
 categories: blog
 tags: [学习,Android]
-description: 今天学习了RadioButton和CheckBox这两个控件
+description: 今天学习了RadioButton，CheckBox和ImageView这三个控件
 ---
 
 ## RadioButton
@@ -121,3 +121,26 @@ mCb7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
         });
 ```
 onCheckedChanged()方法里有两个参数：compoundButton是这个checkbox本身，b代表了是否check。
+
+## ImageView
+
+ImageView用来显示图片资源。
+
+根据官方文档，它是View的直接子类。它的子类有ImageButton，QuickContactBadge。
+![UoSjsO.png](https://s1.ax1x.com/2020/07/21/UoSjsO.png)
+
+它有两个主要的属性：
+
+src，这个属性值填写图片资源的位置
+
+scaleType，这个属性规定了图片的缩放方式，也就是图片要以何种方式来呈现。下面来实际演示以下这个属性的各个值的效果
+
+### scaleType
+
+这个属性能取的值有**CENTER**，**CENTER_CROP**，**CENTER_INSIDE**，**FIT_CENTER**，**FIT_END**，**FIT_START**，**FIT_XY**和**MATRIX**共8个值，默认值是FIT_CENTER，我们来一一测试一下。
+
+我测试用的原始图片是一张随便找的网图
+![UoCiKf.jpg](https://s1.ax1x.com/2020/07/21/UoCiKf.jpg)
+尺寸是474 × 313 pixels的。现在我创建8个ImageView，每个ImageView的宽是150dp，高是200dp，背景颜色是#22DDDD，天蓝色。
+
+1
