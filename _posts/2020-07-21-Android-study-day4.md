@@ -143,4 +143,65 @@ scaleType，这个属性规定了图片的缩放方式，也就是图片要以�
 ![UoCiKf.jpg](https://s1.ax1x.com/2020/07/21/UoCiKf.jpg)
 尺寸是474 × 313 pixels的。现在我创建8个ImageView，每个ImageView的宽是150dp，高是200dp，背景颜色是#22DDDD，天蓝色。
 
-1
+#### 1 fitCenter
+它将使得图片缩放到当前视图的大小；如果原图大于视图，则将其缩小；小图则放大；最后居中显示。效果如图：
+![UonJ8U.png](https://s1.ax1x.com/2020/07/21/UonJ8U.png)
+
+#### 2 centerCrop
+根据官方文档的解释，选择这个缩放方式会均匀缩放图片（保持图像的纵横比）以使得图像的宽度和高度都等于或大于视图的相应尺寸（减去了填充）；图像在视图中是居中的。实际效果：
+![UoksXt.png](https://s1.ax1x.com/2020/07/21/UoksXt.png)
+
+可以看到图片并没有变形，但是相当于左右两边各被裁去了一部分，图片的中心部分出现在视图中。就相当于图片的中心部分开始放大，直到把控件区域填满。
+
+#### 3 center
+官方文档说这个缩放方式将会使图像在视图中居中，但不缩放。实际效果：
+![UoEToT.png](https://s1.ax1x.com/2020/07/21/UoEToT.png)
+
+可以看到图片显示在了视图的中央，没有缩放动作。但是有些地方超出了控件区域，就没有显示。
+
+#### 4 centerInside
+这个缩放方式将会统一缩放图片（保持图像的纵横比），以使图像的宽度和高度都等于或者小于视图的相应尺寸（减去填充）；图像在视图中是居中的。实际效果：
+![Uoe0y9.png](https://s1.ax1x.com/2020/07/21/Uoe0y9.png)
+
+可以看到图片完整地显示在了视图的中央，但是由于宽高比和控件的不一样，所以上下有些地方多了出来，这是图片尺寸大于控件尺寸的情况；如果小于空间尺寸，那么图片直接就居中显示在控件的中央。
+
+#### 5 fitEnd
+它的缩放方式和fitCenter一样，区别就是图像的摆放位置不一样：当图片长度大于宽度时，它居下，宽度大于长度时居右。实际效果：
+![UoukL9.png](https://s1.ax1x.com/2020/07/21/UoukL9.png)
+
+#### 6 fitStart
+与fitEnd基本相同，就是图片会居上或居左（取决于宽度和高度）。实际效果：
+![Uouswn.png](https://s1.ax1x.com/2020/07/21/Uouswn.png)
+
+#### 7 fitXY
+它将显示图片的全部内容，但是图片将会被拉伸以覆盖整个控件。实际效果：
+![UoK31U.png](https://s1.ax1x.com/2020/07/21/UoK31U.png)
+
+#### 8 matrix
+和center类似，不对图像进行缩放。center是直接把图片居中，超过控件的部分不显示；matrix则是把图片的左上角和控件的左上角重合，超过控件的部分不显示。实际效果：
+![UolD3V.png](https://s1.ax1x.com/2020/07/21/UolD3V.png)
+
+### 显示网络图片
+在GitHub上有一个伟大的项目叫做Glide，它可以让你非常方便地在一个ImageView里显示网络上的图片，要使用这项功能，你需要在你的build.gradle文件里添加：
+
+1：
+```
+repositories {
+    google()
+    jcenter()
+}
+```
+2:
+```
+dependencies {
+  implementation 'com.github.bumptech.glide:glide:4.11.0'
+  annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+}
+```
+
+添加完毕后，点击同步。同步完毕后你就可以使用glide的功能了。
+
+要在ImageView里显示网络图片，需要到java文件里进行操作。语法是：
+`       Glide.with(this).load("yourPictureLink").into(yourImageView);`
+
+
