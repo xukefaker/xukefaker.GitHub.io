@@ -85,3 +85,39 @@ new一个drawable resource file，由于我们要做的是选中后状态变化�
 ```
 这样我们就完成了自定义的RadioButton，再每个RadioButton里，通过定义它的background属性来引用上面的drawable resource文件即可。
 `            android:background="@drawable/selector_orange_radiobutton"`
+
+### RadioGroup的选择事件监听器
+
+通常，我们会想当用户更改选择时，我们要根据他的选择来做相应的事情，比如用户选择了男性，那么展示的商品就应该是男装；女性同理。要这样做，我们应该在对应的java文件里对RadioGroup设置一个选择改变监听器。
+```
+mRG1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+            }
+        });
+```
+mRG1的类型是RadioGroup，通过findviewbyid方法实例化，这里不再赘述。
+
+可以看到监听器有一个方法onCheckedChanged()，它的参数时radiogroup和i，i就是被选中的radiobutton的ID，通过这个findviewbyid方法你就可以在此方法里对选中的radiobutton进行一些操作。
+
+## CheckBox
+
+CheckBox的中文名叫做复选框。根据官方文档的解释，Checkboxes允许用户从一个集合里选择一个或者多个的选项。一般来说，这些选项应该垂直摆放。由于checkboxes提供复选的选项，所以这些checkboxes并没有像radiobutton绑定在一个group里，而是分别管理的。
+
+CheckBox时CompoundButton的直接子类。
+![UIjM7R.png](https://s1.ax1x.com/2020/07/21/UIjM7R.png)
+
+CheckBox和RadioButton非常像，区别就是一个是单选一个是多选。这导致一个需要绑定在一个组里面，而另一个不需要这样做。上面RadioButton已经介绍得很详细了，这里不再做无用功。简单地说一下一个CheckBox的选择更改监听器。
+
+#### CheckBox的选择更改监听器
+
+RadioButton的选择更改监听器要设置在RadioGroup上，而CheckBox则是设置在它们本身上面。声明控件后找到控件，最后设置监听器的方法如下：
+```
+mCb7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+        });
+```
+onCheckedChanged()方法里有两个参数：compoundButton是这个checkbox本身，b代表了是否check。
