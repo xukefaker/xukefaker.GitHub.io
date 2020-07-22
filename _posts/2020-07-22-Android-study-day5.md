@@ -10,12 +10,15 @@ description: 今天学习了ListView这个控件
 ## ListView
 
 listview中文名叫做列表视图。它垂直地显示可滚动的视图集合，其中每个视图（view）都直接位于上一个视图的下方。如图：
+
 ![UHKwz6.png](https://s1.ax1x.com/2020/07/22/UHKwz6.png)
 
 listview是AbsListView的子类，它的子类有ExpandableListView。
+
 ![UHKhSP.png](https://s1.ax1x.com/2020/07/22/UHKhSP.png)
 
 下面我们来实现一个自定义的列表视图，效果如图：
+
 ![UHQlbF.gif](https://s1.ax1x.com/2020/07/22/UHQlbF.gif)
 
 #### 1 创建一个view
