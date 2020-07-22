@@ -127,6 +127,13 @@ public View getView(int i, View view, ViewGroup viewGroup) {
             }
         });
 ```
+adapterView:发生点击事件的AbsListView
+
+view：AbsListView中被点击的视图
+
+i：视图的索引（位置）
+
+l：被点击视图的行ID
 
 **长按后显示长按的位置**
 ```
@@ -138,6 +145,7 @@ public View getView(int i, View view, ViewGroup viewGroup) {
             }
         });
 ```
+参数意义和上面的一样。
 
 ### 问题：为什么一定要context？
 在很多地方我都能看到context的存在，而许多时候往往Activity.this即可作为context使用，这到底有啥用？
